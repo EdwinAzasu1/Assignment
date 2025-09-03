@@ -1,5 +1,5 @@
-NAME:Edwin Azasu Makafui
-CONTACT: azasuedwin20@gmail.com
+- NAME:Edwin Azasu Makafui
+- CONTACT: azasuedwin20@gmail.com
 
 
 📚 Book Tracker API Project
