@@ -9,7 +9,7 @@ let books = [
 
 // 1. GET /books → Get all books
 app.get('/books', (req, res) => {
-  res.json({ success: true, data: books });
+  res.json({ success: "this is your collection", data: books });
 });
 
 // 1. GET /books/completed → Get only completed books
@@ -25,7 +25,7 @@ app.get('/books/search', (req, res) => {
     return res.status(400).json({ success: false, message: "Query parameter 'title' is required" });
   }
   const matchedBooks = books.filter(book => book.title.toLowerCase().includes(title.toLowerCase()));
-  res.json({ success: true, data: matchedBooks });
+  res.json({ success: "this is your search resault", data: matchedBooks });
 });
 
 // 2 & 4. POST /books → Add a new book with validation and createdAt field
@@ -46,7 +46,7 @@ app.post('/books', (req, res) => {
     createdAt: new Date().toISOString()
   };
   books.push(newBook);
-  res.status(201).json({ success: true, data: newBook });
+  res.status(201).json({ success: "Book added", data: newBook });
 });
 
 // 5. PUT /books/:id → Update a book by ID with validation
